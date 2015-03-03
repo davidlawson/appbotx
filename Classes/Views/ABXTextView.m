@@ -58,6 +58,12 @@
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    [self setNeedsDisplay];
+}
+
 - (void)drawRect:(CGRect)rect
 {
 	[super drawRect:rect];
