@@ -130,7 +130,9 @@
 
 + (NSInteger)topOffsetForController:(UIViewController*)controller
 {
-    if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending) {
+  if ([[[UIDevice currentDevice] systemVersion] compare:@"8.0" options:NSNumericSearch] != NSOrderedAscending) {
+    return 0;
+  } else if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending) {
         // Determine the status bar size
         CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
         CGRect statusBarWindowRect = [controller.view.window convertRect:statusBarFrame fromWindow: nil];
