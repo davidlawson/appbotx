@@ -60,6 +60,21 @@
     return self;
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    
+    self.dateLabel.frame = CGRectMake(15, 10, (CGRectGetWidth(self.contentView.bounds) - 30)/2, 30);
+    self.textDetailsLabel.frame = CGRectMake(15, 40, CGRectGetWidth(self.contentView.bounds) - 30, 0);
+    
+    if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] == NSOrderedAscending) {
+        self.actionButton.frame = CGRectMake(20, CGRectGetHeight(self.contentView.bounds) - 38, CGRectGetWidth(self.contentView.bounds) - 40, 32);
+    }
+    else {
+        self.actionButton.frame = CGRectMake(0, CGRectGetHeight(self.contentView.bounds) - 44, CGRectGetWidth(self.contentView.bounds), 44);
+    }
+}
+
 - (void)setNotification:(ABXNotification *)notification
 {
     _notification = notification;
