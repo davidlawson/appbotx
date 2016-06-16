@@ -8,8 +8,7 @@ Pod::Spec.new do |s|
   s.name             = "AppbotX"
   s.version          = "1.0.6"
   s.summary          = "AppbotX is an Obj-C lib for the Appbot server."
-  s.description      = <<-DESC
-                       DESC
+  s.description      = "AppbotX is an Obj-C lib for the Appbot server."
   s.homepage         = "http://appbot.co"
   s.license          = 'MIT'
   s.author           = { "Stuart Hall" => "stuartkhall@gmail.com" }
